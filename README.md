@@ -1,6 +1,6 @@
 # command-line-magic
 
-### 1. Caching Git Password
+### 🔨 Caching Git Password
 
 #### HTTPS clone
 
