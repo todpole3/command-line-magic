@@ -1,12 +1,10 @@
 # command-line-magic
 
-## Git
-
 ### Caching Git Password
 
 #### HTTPS clone
 
-1. Check if `osxkeychain helper` is installed:
+1. Check if `osxkeychain helper` is installed
 ```
 git credential-osxkeychain
 ```
