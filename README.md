@@ -1,8 +1,10 @@
 # command-line-magic
 
-## Caching Github Password
+## Git
 
-### HTTPS clone
+### Caching Git Password
+
+#### HTTPS clone
 
 1. Check if `osxkeychain helper` is installed:
 ```
