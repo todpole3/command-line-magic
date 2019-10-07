@@ -24,3 +24,11 @@ git credential-osxkeychain
 ```
 git config --global credential.helper osxkeychain
 ```
+
+### 🔨 Changing use credentials in a particular repository
+Clear local git credentials
+```
+git config --local credential.helper ""
+```
+the proceed with the git operations you want to perform. You will be prompted to enter credentials again.
+
