@@ -47,3 +47,31 @@ git reset --hard HEAD~1
 ```
 git config --get remote.origin.url
 ```
+
+### ✨ Delete a local Git branch
+
+Delete the local branch only if you have already pushed and merged it with your remote branches.
+```
+git branch -d <branch_name>
+
+git branch --delete <branch_name>
+```
+
+Delete the local branch regardless of its push and merge status.
+```
+git branch -D <branch_name>
+
+git branch --delete --force <branch_name>
+```
+
+Push the local branch to remote and delete it locally.
+```
+git push -d
+```
+
+### ✨ Delete a remote Git branch
+```
+git push <remote_name> --delete <branch_name>
+
+git push <remote_name> :<branch_name>
+```
