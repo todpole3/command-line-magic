@@ -75,3 +75,8 @@ git push <remote_name> --delete <branch_name>
 
 git push <remote_name> :<branch_name>
 ```
+
+### ✨ Checkout a particular commit and create a branch
+```
+git checkout -b <branch_name> <commit_no>
+```
