@@ -80,3 +80,12 @@ git push <remote_name> :<branch_name>
 ```
 git checkout -b <branch_name> <commit_no>
 ```
+
+### ✨ Find files modified after a particular timestamp
+```
+touch -t YYMMDDhhmm.SS /tmp/timestamp 
+
+find directory -type f -newer /tmp/timestamp
+
+rm /tmp/timestamp
+```
