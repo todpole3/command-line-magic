@@ -1,7 +1,6 @@
 # Command Line Magic 
 
 ## Git
----
 ### Caching git password
 
 #### HTTPS clone
@@ -91,7 +90,6 @@ git checkout -b <branch_name> <commit_no>
 ```
 
 ## Find
----
 ### Find files modified after a particular timestamp
 ```
 touch -t YYMMDDhhmm.SS /tmp/timestamp 
