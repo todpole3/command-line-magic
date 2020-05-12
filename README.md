@@ -1,6 +1,8 @@
-# 🧙‍♀️ command-line-magic 
+# Command Line Magic 
 
-### ✨ Caching git password
+## Git
+---
+### Caching git password
 
 #### HTTPS clone
 
@@ -25,14 +27,14 @@ git credential-osxkeychain
 git config --global credential.helper osxkeychain
 ```
 
-### ✨ Changing use credentials in a particular repository
+### Changing use credentials in a particular repository
 Clear local git credentials
 ```
 git config --local credential.helper ""
 ```
 the proceed with the git operations you want to perform. You will be prompted to enter credentials again.
 
-### ✨ Revert unpushed Git commits
+### Revert unpushed Git commits
 Delete the most recent commit, keeping the work you've done:
 ```
 git reset --soft HEAD~1
@@ -43,12 +45,19 @@ Delete the most recent commit, destroying the work you've done:
 git reset --hard HEAD~1
 ```
 
-### ✨ Find remote URL of a Git repository
+### Find remote URL of a Git repository
 ```
 git config --get remote.origin.url
 ```
 
-### ✨ Delete a local Git branch
+### Push a local Git branch to remote
+```
+git checkout -b <branch>
+
+git push -u origin <branch>
+```
+
+### Delete a local Git branch
 
 Delete the local branch only if you have already pushed and merged it with your remote branches.
 ```
@@ -69,19 +78,21 @@ Push the local branch to remote and delete it locally.
 git push -d
 ```
 
-### ✨ Delete a remote Git branch
+### Delete a remote Git branch
 ```
 git push <remote_name> --delete <branch_name>
 
 git push <remote_name> :<branch_name>
 ```
 
-### ✨ Checkout a particular commit and create a branch
+### Checkout a particular commit and create a branch
 ```
 git checkout -b <branch_name> <commit_no>
 ```
 
-### ✨ Find files modified after a particular timestamp
+## Find
+---
+### Find files modified after a particular timestamp
 ```
 touch -t YYMMDDhhmm.SS /tmp/timestamp 
 
