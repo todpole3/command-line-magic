@@ -98,3 +98,14 @@ find directory -type f -newer /tmp/timestamp
 
 rm /tmp/timestamp
 ```
+
+## ⚗️ Kubernetes
+### Find pods by criteria
+```
+kubectl get pods | grep Evicted | awk '{print $1}' 
+```
+
+### Delete pods by criteria
+```
+kubectl get pods | grep Evicted | awk '{print $1}' | xargs kubectl delete pod
+```
