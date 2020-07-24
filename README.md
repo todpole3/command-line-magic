@@ -1,9 +1,10 @@
 # Command Line Magic 
 
 ## ⚗️ Git
-### Caching git password
 
-#### HTTPS clone
+### Git Credentials
+
+#### Caching git password
 
 ##### Linux 
 Set git to use the credential memory cache
@@ -26,14 +27,24 @@ git credential-osxkeychain
 git config --global credential.helper osxkeychain
 ```
 
-### Changing use credentials in a particular repository
-Clear local git credentials
+#### Changing use credentials in a particular repository
+First, clear local git credentials
 ```
 git config --local credential.helper ""
 ```
-the proceed with the git operations you want to perform. You will be prompted to enter credentials again.
+then proceed with the git operations you want to perform. You will be prompted to enter credentials again.
 
-### Revert unpushed Git commits
+### Revert git operations
+#### Revert Git add
+Unstage a particular file
+```
+git reset <file>
+```
+Unstage all changes
+```
+git reset
+```
+#### Revert unpushed Git commits
 Delete the most recent commit, keeping the work you've done:
 ```
 git reset --soft HEAD~1
@@ -49,14 +60,15 @@ git reset --hard HEAD~1
 git config --get remote.origin.url
 ```
 
-### Push a local Git branch to remote
+### Git branch operations
+#### Push a local Git branch to remote
 ```
 git checkout -b <branch>
 
 git push -u origin <branch>
 ```
 
-### Delete a local Git branch
+#### Delete a local Git branch
 
 Delete the local branch only if you have already pushed and merged it with your remote branches.
 ```
@@ -77,16 +89,44 @@ Push the local branch to remote and delete it locally.
 git push -d
 ```
 
-### Delete a remote Git branch
+#### Delete a remote Git branch
 ```
 git push <remote_name> --delete <branch_name>
 
 git push <remote_name> :<branch_name>
 ```
 
-### Checkout a particular commit and create a branch
+#### Checkout a particular commit and create a branch
 ```
 git checkout -b <branch_name> <commit_no>
+```
+
+### Git submodule operations
+#### Clone a repository that contains submodules
+Clone a respository including its submodules
+```
+git clone --recursive <url_to_git_repo>
+```
+Load submodules in a already cloned repository
+```
+git submodule update --init
+# if there are nested submodules
+git submodule update --init --recursive
+```
+Download N submodules at once
+```
+git submodule update --init --recursive --jobs 8
+git submodule update --init --recursive -j 8
+git clone --recursive --jobs 8 <url_to_git_repo>
+```
+#### Pulling with submodules
+Pull all changes in the repo including changes in the submodules
+```
+git pull --recurse-submodules
+```
+Pill all changes for the submodules
+```
+git submodule update --remote
 ```
 
 ## ⚗️ Find
