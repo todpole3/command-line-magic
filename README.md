@@ -129,6 +129,12 @@ Pill all changes for the submodules
 git submodule update --remote
 ```
 
+## ⚗️ Network
+### Get process ID listening to a port
+```
+lsof -i :6006
+```
+
 ## ⚗️ Find
 ### Find files modified after a particular timestamp
 ```
